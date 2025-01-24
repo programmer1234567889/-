@@ -418,7 +418,134 @@
                 },
                 emergency: true
             },
-            
+           
+    'تضخم القلب (Cardiomegaly)': {
+        symptoms: [
+            { text: 'ضيق في التنفس', severity: 'high' },
+            { text: 'التعب والإرهاق', severity: 'medium' },
+            { text: 'تورم في الساقين أو القدمين', severity: 'high' },
+            { text: 'خفقان القلب', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'مثبطات الإنزيم المحول للأنجيوتنسين (ACE inhibitors)', type: 'medication' },
+            { text: 'حاصرات بيتا', type: 'medication' },
+            { text: 'مدرات البول', type: 'medication' }
+        ],
+        scientificInfo: {
+            name: 'Cardiomegaly',
+            type: 'اضطراب في القلب',
+            transmission: 'غير معدي'
+        },
+        emergency: true
+    },
+    'اعتلال عضلة القلب الضخامي (Hypertrophic Cardiomyopathy)': {
+        symptoms: [
+            { text: 'ألم في الصدر', severity: 'high' },
+            { text: 'الدوخة أو الإغماء', severity: 'medium' },
+            { text: 'خفقان القلب', severity: 'medium' },
+            { text: 'صعوبة التنفس أثناء التمارين', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'حاصرات بيتا', type: 'medication' },
+            { text: 'حاصرات قنوات الكالسيوم', type: 'medication' },
+            { text: 'مضادات اضطراب النبض', type: 'medication' }
+        ],
+        scientificInfo: {
+            name: 'Hypertrophic Cardiomyopathy',
+            type: 'اضطراب في القلب',
+            transmission: 'غير معدي'
+        },
+        emergency: true
+    },
+    'تمدد الأوعية الدموية الأبهري (Aortic Aneurysm)': {
+        symptoms: [
+            { text: 'ألم في الصدر أو البطن', severity: 'high' },
+            { text: 'نبض واضح في البطن', severity: 'medium' },
+            { text: 'صعوبة التنفس (في الحالات المتقدمة)', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'أدوية ضغط الدم مثل حاصرات بيتا', type: 'medication' },
+            { text: 'أدوية خفض الكوليسترول', type: 'medication' },
+            { text: 'الجراحة في الحالات الكبيرة', type: 'surgical' }
+        ],
+        scientificInfo: {
+            name: 'Aortic Aneurysm',
+            type: 'تمزق الأوعية الدموية',
+            transmission: 'غير معدي'
+        },
+        emergency: true
+    },
+    'متلازمة الشريان التاجي الحادة (Acute Coronary Syndrome)': {
+        symptoms: [
+            { text: 'ألم حاد في الصدر', severity: 'high' },
+            { text: 'التعرق البارد', severity: 'medium' },
+            { text: 'غثيان ودوار', severity: 'medium' },
+            { text: 'ضيق في التنفس', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'مضادات التخثر مثل كلوبيدوغريل', type: 'medication' },
+            { text: 'أدوية النترات مثل النيتروجليسرين', type: 'medication' },
+            { text: 'أدوية خفض الكوليسترول مثل ستاتينات', type: 'medication' }
+        ],
+        scientificInfo: {
+            name: 'Acute Coronary Syndrome',
+            type: 'اضطراب في الشرايين التاجية',
+            transmission: 'غير معدي'
+        },
+        emergency: true
+    },
+    'داء الارتجاع المعدي المريئي (GERD)': {
+        symptoms: [
+            { text: 'حرقة في المعدة', severity: 'medium' },
+            { text: 'صعوبة في البلع', severity: 'medium' },
+            { text: 'ارتجاع الأحماض', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'مثبطات مضخة البروتون', type: 'medication' },
+            { text: 'مضادات الحموضة', type: 'supportive' },
+            { text: 'تغيير نمط الحياة', type: 'lifestyle' }
+        ],
+        scientificInfo: {
+            name: 'Gastroesophageal Reflux Disease',
+            type: 'اضطراب هضمي',
+            transmission: 'غير معدي'
+        },
+        emergency: false
+    },
+    'انسداد الأمعاء (Intestinal Obstruction)': {
+        symptoms: [
+            { text: 'ألم حاد في البطن', severity: 'high' },
+            { text: 'انتفاخ في البطن', severity: 'medium' },
+            { text: 'توقف إخراج البراز والغازات', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'إدخال أنبوب أنفي معدي لتخفيف الضغط', type: 'supportive' },
+            { text: 'الجراحة في الحالات الشديدة', type: 'surgical' }
+        ],
+        scientificInfo: {
+            name: 'Intestinal Obstruction',
+            type: 'اضطراب هضمي',
+            transmission: 'غير معدي'
+        },
+        emergency: true
+    },
+    'الداء الزلاقي (Celiac Disease)': {
+        symptoms: [
+            { text: 'الإسهال المزمن', severity: 'high' },
+            { text: 'فقدان الوزن', severity: 'medium' },
+            { text: 'فقر الدم الناتج عن نقص الحديد', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'نظام غذائي خالٍ من الغلوتين', type: 'lifestyle' }
+        ],
+        scientificInfo: {
+            name: 'Celiac Disease',
+            type: 'اضطراب مناعي',
+            transmission: 'غير معدي'
+        },
+        emergency: false
+    },
+
             'التهاب الشعب الهوائية': {
                 symptoms: [
                     { text: 'سعال', severity: 'high' },
