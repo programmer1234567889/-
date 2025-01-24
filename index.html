@@ -545,6 +545,101 @@
         },
         emergency: false
     },
+           const diseases = {
+    // أمراض القلب والأوعية الدموية
+    'داء المشعرات الطفيلي': {
+        symptoms: [
+            { text: 'حكة أو تهيج في المنطقة التناسلية', severity: 'medium' },
+            { text: 'إفرازات مهبلية أو من القضيب', severity: 'medium' },
+            { text: 'ألم أثناء التبول', severity: 'medium' },
+            { text: 'احمرار أو التهاب في الأعضاء التناسلية', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'ميترونيدازول (Metronidazole)', type: 'antibiotic' },
+            { text: 'تينيدازول (Tinidazole)', type: 'antibiotic' }
+        ],
+        scientificInfo: {
+            name: 'Trichomoniasis',
+            type: 'عدوى طفيلية',
+            transmission: 'انتقال جنسي'
+        },
+        emergency: false
+    },
+
+    // أمراض المناعة الذاتية
+    'تصلب الجلد': {
+        symptoms: [
+            { text: 'شد في الجلد', severity: 'high' },
+            { text: 'تورم وألم في الأصابع', severity: 'medium' },
+            { text: 'صعوبة في البلع', severity: 'high' },
+            { text: 'مشاكل في التنفس', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'مثبطات المناعة مثل ميثوتريكسات (Methotrexate)', type: 'immune-suppressant' },
+            { text: 'العلاج الطبيعي', type: 'supportive' }
+        ],
+        scientificInfo: {
+            name: 'Scleroderma',
+            type: 'مرض مناعي ذاتي',
+            transmission: 'غير معدي'
+        },
+        emergency: false
+    },
+
+    'متلازمة غودباستشر': {
+        symptoms: [
+            { text: 'سعال مصحوب بالدم', severity: 'high' },
+            { text: 'فشل كلوي', severity: 'high' },
+            { text: 'ضيق في التنفس', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'البلازمافيريس (Plasmapheresis)', type: 'plasma-treatment' },
+            { text: 'مثبطات المناعة مثل السيكلوفوسفاميد (Cyclophosphamide)', type: 'immune-suppressant' }
+        ],
+        scientificInfo: {
+            name: 'Goodpasture Syndrome',
+            type: 'مرض مناعي ذاتي',
+            transmission: 'غير معدي'
+        },
+        emergency: true
+    },
+
+    'الداء البطني': {
+        symptoms: [
+            { text: 'الإسهال المزمن', severity: 'medium' },
+            { text: 'فقدان الوزن غير المبرر', severity: 'medium' },
+            { text: 'الانتفاخ وآلام البطن', severity: 'medium' },
+            { text: 'نقص التغذية', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'نظام غذائي خالٍ من الغلوتين', type: 'dietary' }
+        ],
+        scientificInfo: {
+            name: 'Celiac Disease',
+            type: 'مرض مناعي ذاتي',
+            transmission: 'غير معدي'
+        },
+        emergency: false
+    },
+
+    'التهاب الغدة الدرقية دي كورفان': {
+        symptoms: [
+            { text: 'ألم في الرقبة أو الحلق', severity: 'medium' },
+            { text: 'حمى', severity: 'medium' },
+            { text: 'تعب وإرهاق', severity: 'low' },
+            { text: 'تورم في الغدة الدرقية', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'مسكنات الألم مثل إيبوبروفين (Ibuprofen)', type: 'supportive' },
+            { text: 'الكورتيكوستيرويدات مثل بريدنيزون (Prednisone)', type: 'anti-inflammatory' }
+        ],
+        scientificInfo: {
+            name: 'De Quervain Thyroiditis',
+            type: 'التهاب الغدة الدرقية',
+            transmission: 'غير معدي'
+        },
+        emergency: false
+},
 
             'التهاب الشعب الهوائية': {
                 symptoms: [
