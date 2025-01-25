@@ -584,7 +584,56 @@
         },
         emergency: false
     },
-
+ 'متلازمة تكيس المبايض (PCOS)': {
+        symptoms: [
+            { text: 'عدم انتظام الدورة الشهرية', severity: 'medium' },
+            { text: 'زيادة الوزن', severity: 'medium' },
+            { text: 'ظهور الشعر الزائد', severity: 'medium' },
+            { text: 'تأخر الحمل', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'تعديل نمط الحياة', type: 'lifestyle' },
+            { text: 'أدوية تنظيم الهرمونات', type: 'medical' },
+            { text: 'علاجات مخصصة للحمل', type: 'medical' }
+        ],
+        scientificInfo: {
+            name: 'Polycystic Ovary Syndrome',
+            type: 'اضطراب هرموني'
+        },
+        emergency: false
+    },
+    'الالتهابات المهبلية': {
+        symptoms: [
+            { text: 'حكة', severity: 'medium' },
+            { text: 'إفرازات غير طبيعية', severity: 'high' },
+            { text: 'رائحة كريهة', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'أدوية مضادة للفطريات', type: 'antifungal' },
+            { text: 'مضادات حيوية حسب الحالة', type: 'antibiotic' }
+        ],
+        scientificInfo: {
+            name: 'Vaginitis',
+            type: 'عدوى (بكتيرية، فطرية، أو فيروسية)'
+        },
+        emergency: false
+    },
+    'الأورام الليفية في الرحم': {
+        symptoms: [
+            { text: 'نزيف غزير خلال الدورة الشهرية', severity: 'high' },
+            { text: 'آلام في الحوض', severity: 'medium' },
+            { text: 'صعوبة في الحمل', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'جراحة لإزالة الأورام', type: 'surgical' },
+            { text: 'أدوية هرمونية', type: 'medical' }
+        ],
+        scientificInfo: {
+            name: 'Uterine Fibroids',
+            type: 'نمو غير طبيعي في أنسجة الرحم'
+        },
+        emergency: false
+    },
     'متلازمة غودباستشر': {
         symptoms: [
             { text: 'سعال مصحوب بالدم', severity: 'high' },
