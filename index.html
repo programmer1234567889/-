@@ -3416,19 +3416,24 @@
             document.getElementById('diseaseInfo').style.display = 'block';
 
             // عرض العلاج المنزلي
-            const homeRemediesContainer = document.getElementById('homeRemedies');
-            homeRemediesContainer.innerHTML = '';
-            disease.homeRemedies.forEach((remedy, index) => {
-                const div = document.createElement('div');
-                div.className = 'remedy-item';
-                div.style.animationDelay = `${index * 0.1}s`;
-                div.innerHTML = `
-                    <span>🏠</span>
-                    <span>${remedy.text}</span>
-                `;
-                homeRemediesContainer.appendChild(div);
-            });
-        }
+          const homeRemediesContainer = document.getElementById('homeRemedies');
+homeRemediesContainer.innerHTML = '';
+
+if (disease.homeRemedies && disease.homeRemedies.length > 0) {
+    disease.homeRemedies.forEach((remedy, index) => {
+        const div = document.createElement('div');
+        div.className = 'remedy-item';
+        div.style.animationDelay = `${index * 0.1}s`;
+        div.innerHTML = `
+            <span>🏠</span>
+            <span>${remedy.text}</span>
+        `;
+        homeRemediesContainer.appendChild(div);
+    });
+} else {
+    // لو ما في علاجات منزلية
+    homeRemediesContainer.innerHTML = `<p style="padding: 10px;">لا توجد علاجات منزلية متاحة لهذا المرض.</p>`;
+}
 
         // تبديل السمة
         function toggleTheme() {
