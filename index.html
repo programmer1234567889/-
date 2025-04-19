@@ -3416,7 +3416,7 @@
             document.getElementById('diseaseInfo').style.display = 'block';
 
             // عرض العلاج المنزلي
-          const homeRemediesContainer = document.getElementById('homeRemedies');
+      const homeRemediesContainer = document.getElementById('homeRemedies');
 homeRemediesContainer.innerHTML = '';
 
 if (disease.homeRemedies && disease.homeRemedies.length > 0) {
@@ -3431,10 +3431,8 @@ if (disease.homeRemedies && disease.homeRemedies.length > 0) {
         homeRemediesContainer.appendChild(div);
     });
 } else {
-    // لو ما في علاجات منزلية
     homeRemediesContainer.innerHTML = `<p style="padding: 10px;">لا توجد علاجات منزلية متاحة لهذا المرض.</p>`;
 }
-
         // تبديل السمة
         function toggleTheme() {
             const body = document.body;
