@@ -26,35 +26,6 @@
             --text-dark: #bdc3c7;
         }
 
-        /* === الأنيميشن === */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes rotate3D {
-            0% { transform: perspective(1000px) rotateY(0deg); }
-            100% { transform: perspective(1000px) rotateY(360deg); }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* === التنسيقات الأساسية === */
         * {
             margin: 0;
@@ -78,39 +49,7 @@
 
         /* === شريط التحميل === */
         .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--primary-gradient);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        .dna-loader {
-            width: 100px;
-            height: 100px;
-            position: relative;
-            animation: rotate3D 3s infinite linear;
-        }
-
-        .dna-loader::before,
-        .dna-loader::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: var(--text-light);
-            border-radius: 50%;
-            animation: float 1.5s infinite ease-in-out alternate;
-        }
-
-        .dna-loader::after {
-            animation-delay: 0.75s;
-            background: var(--accent-color);
+            display: none; /* إخفاء شاشة التحميل */
         }
 
         /* === الهيدر === */
@@ -3281,140 +3220,131 @@
             // ... existing code ...
         };
         
+// تهيئة التطبيق
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('تم تحميل الصفحة'); // رسالة تصحيح
+    // لا حاجة لأي كود متعلق بشاشة التحميل أو الأنيميشنات
+});
 
-        // تهيئة التطبيق
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.querySelector('.loading-screen').style.opacity = '0';
-                setTimeout(() => {
-                    document.querySelector('.loading-screen').style.display = 'none';
-                }, 500);
-            }, 2000);
-        });
+       
 
-        // البحث
-        const searchInput = document.getElementById('diseaseSearch');
-        const searchResults = document.getElementById('searchResults');
-        
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.trim();
-            searchResults.innerHTML = '';
-            
-            if (searchTerm.length > 0) {
-                const matches = advancedSearch(searchTerm);
+// البحث
+const searchInput = document.getElementById('diseaseSearch');
+const searchResults = document.getElementById('searchResults');
 
-                if (matches.length > 0) {
-                    searchResults.style.display = 'block';
-                    matches.forEach(match => {
-                        const div = document.createElement('div');
-                        div.className = 'result-item';
-                        div.innerHTML = `
-                            <span>🔍</span>
-                            <span>${match.name}</span>
-                            ${match.relevance < 1 ? '<small>(نتيجة متعلقة)</small>' : ''}
-                        `;
-                        div.onclick = () => showDiseaseInfo(match.name);
-                        searchResults.appendChild(div);
-                    });
-                } else {
-                    searchResults.style.display = 'none';
-                }
-            } else {
-                searchResults.style.display = 'none';
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.trim();
+    searchResults.innerHTML = '';
+
+    if (searchTerm.length > 0) {
+        const matches = advancedSearch(searchTerm);
+
+        if (matches.length > 0) {
+            searchResults.style.display = 'block';
+            matches.forEach(match => {
+                const div = document.createElement('div');
+                div.className = 'result-item';
+                div.innerHTML = `
+                    <span>🔍</span>
+                    <span>${match.name}</span>
+                    ${match.relevance < 1 ? '<small>(نتيجة متعلقة)</small>' : ''}
+                `;
+                div.onclick = () => showDiseaseInfo(match.name);
+                searchResults.appendChild(div);
+            });
+        } else {
+            searchResults.style.display = 'none';
+        }
+    } else {
+        searchResults.style.display = 'none';
+    }
+});
+
+// وظيفة البحث المتقدم
+function advancedSearch(searchTerm) {
+    const results = [];
+    const searchLower = searchTerm.toLowerCase();
+
+    Object.entries(medicalDatabase).forEach(([disease, data]) => {
+        let relevance = 0;
+
+        // البحث في اسم المرض
+        if (disease.toLowerCase().includes(searchLower)) {
+            relevance = 1;
+        }
+
+        // البحث في الأعراض
+        data.symptoms.forEach(symptom => {
+            if (symptom.text.toLowerCase().includes(searchLower)) {
+                relevance = Math.max(relevance, 0.8);
             }
         });
 
-        // وظيفة البحث المتقدم
-        function advancedSearch(searchTerm) {
-            const results = [];
-            const searchLower = searchTerm.toLowerCase();
-            
-            Object.entries(medicalDatabase).forEach(([disease, data]) => {
-                let relevance = 0;
-                
-                // البحث في اسم المرض
-                if (disease.toLowerCase().includes(searchLower)) {
-                    relevance = 1;
-                }
-                
-                // البحث في الأعراض
-                data.symptoms.forEach(symptom => {
-                    if (symptom.text.toLowerCase().includes(searchLower)) {
-                        relevance = Math.max(relevance, 0.8);
-                    }
-                });
-                
-                // البحث في العلاجات
-                data.treatments.forEach(treatment => {
-                    if (treatment.text.toLowerCase().includes(searchLower)) {
-                        relevance = Math.max(relevance, 0.7);
-                    }
-                });
-                
-                // البحث في المعلومات العلمية
-                if (data.scientificInfo.name.toLowerCase().includes(searchLower)) {
-                    relevance = Math.max(relevance, 0.9);
-                }
-                
-                if (relevance > 0) {
-                    results.push({ name: disease, relevance });
-                }
-            });
-            
-            return results.sort((a, b) => b.relevance - a.relevance);
+        // البحث في العلاجات
+        data.treatments.forEach(treatment => {
+            if (treatment.text.toLowerCase().includes(searchLower)) {
+                relevance = Math.max(relevance, 0.7);
+            }
+        });
+
+        // البحث في المعلومات العلمية
+        if (data.scientificInfo.name.toLowerCase().includes(searchLower)) {
+            relevance = Math.max(relevance, 0.9);
         }
 
-        // عرض معلومات المرض
-        function showDiseaseInfo(diseaseName) {
-            const disease = medicalDatabase[diseaseName];
-            searchInput.value = diseaseName;
-            searchResults.style.display = 'none';
-            
-            // عرض الأعراض
-            const symptomsContainer = document.getElementById('symptoms');
-            symptomsContainer.innerHTML = '';
-            disease.symptoms.forEach((symptom, index) => {
-                const div = document.createElement('div');
-                div.className = `symptom-item severity-${symptom.severity}`;
-                div.style.animationDelay = `${index * 0.1}s`;
-                div.innerHTML = `
-                    <span>${symptom.severity === 'high' ? '⚠️' : '✔️'}</span>
-                    <span>${symptom.text}</span>
-                `;
-                symptomsContainer.appendChild(div);
-            });
+        if (relevance > 0) {
+            results.push({ name: disease, relevance });
+        }
+    });
 
-            // عرض العلاجات
-            const treatmentsContainer = document.getElementById('treatments');
-            treatmentsContainer.innerHTML = '';
-            disease.treatments.forEach((treatment, index) => {
-                const div = document.createElement('div');
-                div.className = 'treatment-item';
-                div.style.animationDelay = `${index * 0.1}s`;
-                div.innerHTML = `
-                    <span>💊</span>
-                    <span>${treatment.text}</span>
-                `;
-                treatmentsContainer.appendChild(div);
-            });
+    return results.sort((a, b) => b.relevance - a.relevance);
+}
 
-            // عرض المعلومات العلمية
-            const scientificContainer = document.getElementById('scientificInfo');
-            scientificContainer.innerHTML = `
-                <h3>الاسم العلمي: ${disease.scientificInfo.name}</h3>
-                <p>النوع: ${disease.scientificInfo.type}</p>
-                ${disease.scientificInfo.prevalence ? `<p>الانتشار: ${disease.scientificInfo.prevalence}</p>` : ''}
-                ${disease.scientificInfo.triggers ? 
-                    `<p>المحفزات: ${disease.scientificInfo.triggers.join('، ')}</p>` : ''}
-            `;
+// عرض معلومات المرض
+function showDiseaseInfo(diseaseName) {
+    const disease = medicalDatabase[diseaseName];
+    searchInput.value = diseaseName;
+    searchResults.style.display = 'none';
 
-            // عرض تحذير الطوارئ
-            document.getElementById('emergencyAlert').style.display = 
-                disease.emergency ? 'flex' : 'none';
+    // عرض الأعراض
+    const symptomsContainer = document.getElementById('symptoms');
+    symptomsContainer.innerHTML = '';
+    disease.symptoms.forEach((symptom, index) => {
+        const div = document.createElement('div');
+        div.className = `symptom-item severity-${symptom.severity}`;
+        div.innerHTML = `
+            <span>${symptom.severity === 'high' ? '⚠️' : '✔️'}</span>
+            <span>${symptom.text}</span>
+        `;
+        symptomsContainer.appendChild(div);
+    });
 
-            // عرض قسم المعلومات
-            document.getElementById('diseaseInfo').style.display = 'block';
+    // عرض العلاجات
+    const treatmentsContainer = document.getElementById('treatments');
+    treatmentsContainer.innerHTML = '';
+    disease.treatments.forEach((treatment, index) => {
+        const div = document.createElement('div');
+        div.className = 'treatment-item';
+        div.innerHTML = `
+            <span>💊</span>
+            <span>${treatment.text}</span>
+        `;
+        treatmentsContainer.appendChild(div);
+    });
 
+    // عرض المعلومات العلمية
+    const scientificContainer = document.getElementById('scientificInfo');
+    scientificContainer.innerHTML = `
+        <h3>الاسم العلمي: ${disease.scientificInfo.name}</h3>
+        <p>النوع: ${disease.scientificInfo.type}</p>
+        ${disease.scientificInfo.prevalence ? `<p>الانتشار: ${disease.scientificInfo.prevalence}</p>` : ''}
+        ${disease.scientificInfo.triggers ? 
+            `<p>المحفزات: ${disease.scientificInfo.triggers.join('، ')}</p>` : ''}
+    `;
+
+    // عرض قسم المعلومات
+    document.getElementById('diseaseInfo').style.display = 'block';
+}
             // عرض العلاج المنزلي
       const homeRemediesContainer = document.getElementById('homeRemedies');
 homeRemediesContainer.innerHTML = '';
