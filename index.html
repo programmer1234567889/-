@@ -503,6 +503,618 @@
         },
         emergency: true
     },
+           'الرقص المقدس (داء الرقص)': {
+        symptoms: [
+            { text: 'حركات لا إرادية عنيفة', severity: 'high' },
+            { text: 'هلوسات', severity: 'medium' },
+            { text: 'تعب شديد', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'علاجات داعمة (في العصور القديمة)', type: 'supportive' },
+            { text: 'أدوية مضادة للتشنجات حديثاً', type: 'anticonvulsant' }
+        ],
+        scientificInfo: {
+            name: 'Dancing Plague of 1518',
+            type: 'اضطراب عصبي نفسي',
+            transmission: 'غير معدي (محتمل نفسي المنشأ)'
+        },
+        emergency: true
+    },
+    'مرض التعرق الإنجليزي': {
+        symptoms: [
+            { text: 'تعرق غزير مفاجئ', severity: 'high' },
+            { text: 'حُمى شديدة', severity: 'high' },
+            { text: 'ألم شديد في الجسم', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'علاجات داعمة (لم يوجد علاج فعال)', type: 'supportive' }
+        ],
+        scientificInfo: {
+            name: 'English Sweating Sickness',
+            type: 'مرض غامض',
+            transmission: 'غير مؤكد (يُعتقد عدوى فيروسية)'
+        },
+        emergency: true
+    },
+    'متلازمة أليس في بلاد العجائب': {
+        symptoms: [
+            { text: 'تشوه إدراك الحجم (الميكروسوميا)', severity: 'medium' },
+            { text: 'تشوه إدراك الزمن', severity: 'medium' },
+            { text: 'هلوسات بصرية', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'علاج السبب (مثل الصداع النصفي)', type: 'treatment of underlying cause' }
+        ],
+        scientificInfo: {
+            name: 'Alice in Wonderland Syndrome',
+            type: 'اضطراب عصبي',
+            transmission: 'غير معدي'
+        },
+        emergency: false
+    },
+    'مرض الحجارة (التصلب العظمي التقدمي)': {
+        symptoms: [
+            { text: 'تحول العضلات والأنسجة إلى عظام', severity: 'high' },
+            { text: 'فقدان تدريجي للحركة', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'علاجات داعمة وتسكين الألم', type: 'supportive' }
+        ],
+        scientificInfo: {
+            name: 'Fibrodysplasia Ossificans Progressiva',
+            type: 'اضطراب وراثي نادر',
+            transmission: 'غير معدي (طفرة جينية)'
+        },
+        emergency: true
+    },
+    'مرض الضحك المميت': {
+        symptoms: [
+            { text: 'نوبات ضحك لا يمكن السيطرة عليها', severity: 'high' },
+            { text: 'ألم شديد وفقدان للوعي', severity: 'high' },
+            { text: 'تدهور عصبي تدريجي', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'لا يوجد علاج فعال (علاجات داعمة فقط)', type: 'supportive' }
+        ],
+        scientificInfo: {
+            name: 'Kuru',
+            type: 'مرض بريوني (مشابه للسُعار العصبي)',
+            transmission: 'معدي عبر أكل لحوم البشر (طقوس جنائزية في بابوا غينيا الجديدة)'
+        },
+        emergency: true
+    },
+           'الجدري': {
+    symptoms: [
+        { text: 'طفح جلدي مع بثور مليئة بالصديد', severity: 'high' },
+        { text: 'حُمّى', severity: 'high' },
+        { text: 'آلام في العضلات', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'لا يوجد علاج محدد (العلاج داعم)', type: 'supportive' },
+        { text: 'لقاح الجدري للوقاية', type: 'vaccine' }
+    ],
+    scientificInfo: {
+        name: 'Smallpox',
+        type: 'فيروسات',
+        transmission: 'معدي عبر الهواء أو الاتصال المباشر مع البثور'
+    },
+    emergency: true
+},
+'الدفتيريا': {
+    symptoms: [
+        { text: 'التهاب في الحلق', severity: 'high' },
+        { text: 'صعوبة في التنفس', severity: 'high' },
+        { text: 'حمى معتدلة', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'مضادات السموم (antitoxins)', type: 'antitoxin' },
+        { text: 'مضادات حيوية', type: 'antibiotic' }
+    ],
+    scientificInfo: {
+        name: 'Diphtheria',
+        type: 'بكتيريا',
+        transmission: 'معدي عبر الهواء أو الاتصال المباشر مع إفرازات الأنف أو الحلق'
+    },
+    emergency: true
+},
+'الحصبة': {
+    symptoms: [
+        { text: 'طفح جلدي يبدأ من الوجه', severity: 'high' },
+        { text: 'سعال', severity: 'medium' },
+        { text: 'حُمّى', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'لقاح الحصبة للوقاية', type: 'vaccine' },
+        { text: 'علاج داعم لتخفيف الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Measles',
+        type: 'فيروسات',
+        transmission: 'معدي عبر الهواء من خلال السعال والعطس'
+    },
+    emergency: true
+},
+'إيبولا': {
+    symptoms: [
+        { text: 'نزيف داخلي وخارجي', severity: 'high' },
+        { text: 'إسهال شديد', severity: 'high' },
+        { text: 'حمى شديدة', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'علاج داعم (إعادة الترطيب والمغذيات)', type: 'supportive' },
+        { text: 'لا يوجد علاج محدد للفيروس', type: 'experimental' }
+    ],
+    scientificInfo: {
+        name: 'Ebola Virus Disease',
+        type: 'فيروسات',
+        transmission: 'معدي عبر سوائل الجسم مثل الدم أو القيء'
+    },
+    emergency: true
+},
+'الزهايمر': {
+    symptoms: [
+        { text: 'فقدان الذاكرة التدريجي', severity: 'high' },
+        { text: 'تشوش الفكر', severity: 'high' },
+        { text: 'صعوبة في اتخاذ القرارات', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'أدوية لتحسين الوظائف العصبية (مثال: مثبطات الكولينستيراز)', type: 'pharmaceutical' },
+        { text: 'علاج داعم لمساعدة المرضى على التكيف مع الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Alzheimer\'s Disease',
+        type: 'اضطرابات عصبية',
+        transmission: 'غير معدي، ناتج عن تدهور خلايا الدماغ'
+    },
+    emergency: false
+},
+'فيروس نقص المناعة البشرية (الإيدز)': {
+    symptoms: [
+        { text: 'إعياء شديد', severity: 'high' },
+        { text: 'تورم الغدد الليمفاوية', severity: 'medium' },
+        { text: 'فقدان الوزن غير المبرر', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'العلاج بمضادات الفيروسات القهقرية (ART)', type: 'antiviral' }
+    ],
+    scientificInfo: {
+        name: 'HIV/AIDS',
+        type: 'فيروسات',
+        transmission: 'معدي عبر الدم أو العلاقات الجنسية غير المحمية أو من الأم إلى الطفل خلال الحمل أو الرضاعة'
+    },
+    emergency: true
+},
+           'الأنفلونزا الطيور': {
+    symptoms: [
+        { text: 'حمى عالية', severity: 'high' },
+        { text: 'سعال جاف', severity: 'high' },
+        { text: 'ألم عضلي شديد', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'مضادات الفيروسات', type: 'antiviral' },
+        { text: 'علاج داعم لتخفيف الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Avian Influenza',
+        type: 'فيروسات',
+        transmission: 'معدي عن طريق الاتصال المباشر مع الطيور المصابة أو فضلاتها'
+    },
+    emergency: true
+},
+'التسمم الغذائي': {
+    symptoms: [
+        { text: 'غثيان وقيء', severity: 'high' },
+        { text: 'إسهال مائي أو دموي', severity: 'high' },
+        { text: 'ألم بطني شديد', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'إعادة الترطيب باستخدام السوائل', type: 'supportive' },
+        { text: 'مضادات للبكتيريا (في حالة العدوى البكتيرية)', type: 'antibiotic' }
+    ],
+    scientificInfo: {
+        name: 'Food Poisoning',
+        type: 'بكتيريا أو فيروسات',
+        transmission: 'معدي عن طريق تناول طعام ملوث'
+    },
+    emergency: true
+},
+'الربو': {
+    symptoms: [
+        { text: 'صعوبة في التنفس', severity: 'high' },
+        { text: 'سعال مستمر', severity: 'medium' },
+        { text: 'صفير في الصدر', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'موسعات الشعب الهوائية (مثل: السالبوتامول)', type: 'bronchodilator' },
+        { text: 'أدوية مضادة للالتهاب (مثل: الكورتيكوستيرويدات)', type: 'steroid' }
+    ],
+    scientificInfo: {
+        name: 'Asthma',
+        type: 'اضطرابات تنفسية',
+        transmission: 'غير معدي، بسبب التهاب في المجاري التنفسية'
+    },
+    emergency: true
+},
+'التهاب الكبد الوبائي ب': {
+    symptoms: [
+        { text: 'يرقان (اصفرار الجلد والعينين)', severity: 'high' },
+        { text: 'ألم في البطن', severity: 'medium' },
+        { text: 'غثيان وفقدان الشهية', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'أدوية مضادة لفيروس التهاب الكبد ب', type: 'antiviral' },
+        { text: 'زرع الكبد في الحالات المتقدمة', type: 'surgical' }
+    ],
+    scientificInfo: {
+        name: 'Hepatitis B',
+        type: 'فيروسات',
+        transmission: 'معدي عبر الدم أو الاتصال الجنسي أو من الأم إلى الطفل أثناء الولادة'
+    },
+    emergency: true
+},
+'الحمى المالطية': {
+    symptoms: [
+        { text: 'حمى متقطعة', severity: 'high' },
+        { text: 'ألم مفصلي وعضلي', severity: 'medium' },
+        { text: 'تعرق ليلي شديد', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'مضادات حيوية', type: 'antibiotic' }
+    ],
+    scientificInfo: {
+        name: 'Brucellosis',
+        type: 'بكتيريا',
+        transmission: 'معدي عبر الاتصال المباشر مع الحيوانات المصابة أو تناول الأطعمة الملوثة'
+    },
+    emergency: true
+},
+'التسمم بالرصاص': {
+    symptoms: [
+        { text: 'إرهاق شديد', severity: 'high' },
+        { text: 'صداع مستمر', severity: 'medium' },
+        { text: 'آلام في البطن', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'العلاج باستخدام أدوية التخلص من السموم (chelation)', type: 'pharmaceutical' },
+        { text: 'التوقف عن التعرض للرصاص', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Lead Poisoning',
+        type: 'تسمم كيميائي',
+        transmission: 'معدي عبر التعرض المستمر للرصاص'
+    },
+    emergency: true
+},
+'التهاب السحايا': {
+    symptoms: [
+        { text: 'صداع شديد', severity: 'high' },
+        { text: 'حُمّى', severity: 'high' },
+        { text: 'تيبس في الرقبة', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'مضادات حيوية', type: 'antibiotic' },
+        { text: 'علاج داعم للمساعدة في تقليل الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Meningitis',
+        type: 'بكتيريا أو فيروسات',
+        transmission: 'معدي عبر السعال أو العطس أو الاتصال المباشر مع السوائل المصابة'
+    },
+    emergency: true
+},
+           التسمم الزئبقي': {
+    symptoms: [
+        { text: 'ألم في البطن', severity: 'high' },
+        { text: 'صداع مستمر', severity: 'medium' },
+        { text: 'إرهاق شديد', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'العلاج باستخدام أدوية التخلص من السموم (chelation)', type: 'pharmaceutical' },
+        { text: 'التوقف عن التعرض للزئبق', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Mercury Poisoning',
+        type: 'تسمم كيميائي',
+        transmission: 'معدي عبر التعرض للزئبق'
+    },
+    emergency: true
+},
+'التهاب الكبد الوبائي ج': {
+    symptoms: [
+        { text: 'يرقان (اصفرار الجلد والعينين)', severity: 'high' },
+        { text: 'ألم في البطن', severity: 'medium' },
+        { text: 'إعياء وفقدان شهية', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'أدوية مضادة لفيروس التهاب الكبد ج', type: 'antiviral' }
+    ],
+    scientificInfo: {
+        name: 'Hepatitis C',
+        type: 'فيروسات',
+        transmission: 'معدي عبر الدم'
+    },
+    emergency: true
+},
+'مرض لايم': {
+    symptoms: [
+        { text: 'طفح جلدي دائري الشكل', severity: 'medium' },
+        { text: 'ألم مفصلي', severity: 'medium' },
+        { text: 'حمى وقشعريرة', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'مضادات حيوية', type: 'antibiotic' }
+    ],
+    scientificInfo: {
+        name: 'Lyme Disease',
+        type: 'بكتيريا',
+        transmission: 'معدي عن طريق لدغات القراد المصاب'
+    },
+    emergency: true
+},
+'مرض الحمى القلاعية': {
+    symptoms: [
+        { text: 'طفح جلدي وتقروح في الفم', severity: 'high' },
+        { text: 'حمى', severity: 'medium' },
+        { text: 'ألم في العضلات والمفاصل', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'علاج داعم (تخفيف الأعراض)', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Foot and Mouth Disease',
+        type: 'فيروسات',
+        transmission: 'معدي عبر سوائل الجسم من الحيوانات المصابة'
+    },
+    emergency: true
+},
+'السل الريفي': {
+    symptoms: [
+        { text: 'سعال مزمن', severity: 'high' },
+        { text: 'إفرازات دموية', severity: 'high' },
+        { text: 'ألم في الصدر', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'مضادات الدرن', type: 'antibiotic' }
+    ],
+    scientificInfo: {
+        name: 'Rural Tuberculosis',
+        type: 'بكتيريا',
+        transmission: 'معدي عبر الهواء'
+    },
+    emergency: true
+},
+'مرض الوردية': {
+    symptoms: [
+        { text: 'احمرار الجلد', severity: 'high' },
+        { text: 'طفح جلدي على الوجه', severity: 'medium' },
+        { text: 'حساسية الجلد', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'أدوية مضادة للبكتيريا أو الكورتيكوستيرويدات', type: 'pharmaceutical' }
+    ],
+    scientificInfo: {
+        name: 'Rosacea',
+        type: 'اضطراب جلدي',
+        transmission: 'غير معدي'
+    },
+    emergency: false
+},
+'التهاب السحايا الفيروسي': {
+    symptoms: [
+        { text: 'صداع حاد', severity: 'high' },
+        { text: 'حمى شديدة', severity: 'high' },
+        { text: 'تيبس في الرقبة', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'علاج داعم', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Viral Meningitis',
+        type: 'فيروسات',
+        transmission: 'معدي عبر السوائل التنفسية مثل السعال والعطس'
+    },
+    emergency: true
+},
+'الملاريا المقوسة': {
+    symptoms: [
+        { text: 'حمى شديدة', severity: 'high' },
+        { text: 'قشعريرة', severity: 'medium' },
+        { text: 'ألم عضلي شديد', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'مضادات الملاريا', type: 'antimalarial' }
+    ],
+    scientificInfo: {
+        name: 'Toxoplasmosis',
+        type: 'طفيليات',
+        transmission: 'معدي عبر الغذاء أو الاتصال مع فضلات القطط'
+    },
+    emergency: true
+},
+'التسمم بالديزل': {
+    symptoms: [
+        { text: 'غثيان وقيء', severity: 'high' },
+        { text: 'صداع', severity: 'medium' },
+        { text: 'ألم في الصدر وصعوبة في التنفس', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'علاج داعم', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Diesel Poisoning',
+        type: 'تسمم كيميائي',
+        transmission: 'معدي عبر التعرض لدخان أو أبخرة الديزل'
+    },
+    emergency: true
+},
+'داء الفطر الأسود': {
+    symptoms: [
+        { text: 'تورم في الوجه أو الجيوب الأنفية', severity: 'high' },
+        { text: 'حمى شديدة', severity: 'high' },
+        { text: 'آلام في الصدر أو تنفس صعب', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'مضادات الفطريات', type: 'antifungal' },
+        { text: 'الجراحة لإزالة الأنسجة المتضررة', type: 'surgical' }
+    ],
+    scientificInfo: {
+        name: 'Black Fungus (Mucormycosis)',
+        type: 'فطريات',
+        transmission: 'معدي عبر استنشاق الأبواغ الفطرية'
+    },
+    emergency: true
+},
+       'فيروس غرب النيل': {
+    symptoms: [
+        { text: 'حُمّى', severity: 'high' },
+        { text: 'صداع حاد', severity: 'medium' },
+        { text: 'تورم الغدد الليمفاوية', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'علاج داعم لتخفيف الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'West Nile Virus',
+        type: 'فيروسات',
+        transmission: 'معدي عبر لدغات البعوض'
+    },
+    emergency: true
+},
+'مرض شلل الأطفال': {
+    symptoms: [
+        { text: 'شلل في الأطراف', severity: 'high' },
+        { text: 'حمى', severity: 'high' },
+        { text: 'ألم في العضلات والمفاصل', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'لقاح شلل الأطفال للوقاية', type: 'vaccine' },
+        { text: 'علاج داعم لتخفيف الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Polio',
+        type: 'فيروسات',
+        transmission: 'معدي عبر الفم أو الاتصال المباشر مع سوائل الجسم'
+    },
+    emergency: true
+},
+'الحمى الصفراء': {
+    symptoms: [
+        { text: 'حمى شديدة', severity: 'high' },
+        { text: 'إصفرار الجلد والعينين', severity: 'high' },
+        { text: 'ألم في العضلات', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'لقاح الحمى الصفراء للوقاية', type: 'vaccine' },
+        { text: 'علاج داعم لتخفيف الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Yellow Fever',
+        type: 'فيروسات',
+        transmission: 'معدي عبر لدغات البعوض'
+    },
+    emergency: true
+},
+'التهاب المفاصل الروماتويدي': {
+    symptoms: [
+        { text: 'ألم وتورم في المفاصل', severity: 'high' },
+        { text: 'تيبس في المفاصل', severity: 'medium' },
+        { text: 'إعياء عام', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'أدوية مضادة للروماتويد (مثل: ميثوتريكسات)', type: 'pharmaceutical' },
+        { text: 'علاج طبيعي لتقوية المفاصل', type: 'physical therapy' }
+    ],
+    scientificInfo: {
+        name: 'Rheumatoid Arthritis',
+        type: 'اضطراب مناعي',
+        transmission: 'غير معدي'
+    },
+    emergency: false
+},
+'التسمم بالفطر': {
+    symptoms: [
+        { text: 'غثيان وقيء', severity: 'high' },
+        { text: 'ألم بطني شديد', severity: 'high' },
+        { text: 'إسهال مائي', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'مضادات التسمم (مثل: الفحم النشط)', type: 'pharmaceutical' },
+        { text: 'علاج داعم (الترطيب وتخفيف الأعراض)', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Mushroom Poisoning',
+        type: 'تسمم غذائي',
+        transmission: 'معدي عبر تناول الفطر السام'
+    },
+    emergency: true
+},
+'فيروس الحصبة الألمانية': {
+    symptoms: [
+        { text: 'طفح جلدي يبدأ من الوجه', severity: 'high' },
+        { text: 'حمى منخفضة', severity: 'medium' },
+        { text: 'تورم الغدد الليمفاوية', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'لقاح الحصبة الألمانية للوقاية', type: 'vaccine' },
+        { text: 'علاج داعم لتخفيف الأعراض', type: 'supportive' }
+    ],
+    scientificInfo: {
+        name: 'Rubella Virus',
+        type: 'فيروسات',
+        transmission: 'معدي عبر السعال أو العطس'
+    },
+    emergency: false
+},
+'مرض تليف الكبد': {
+    symptoms: [
+        { text: 'يرقان (اصفرار الجلد والعينين)', severity: 'high' },
+        { text: 'ألم في البطن', severity: 'high' },
+        { text: 'تعب شديد وفقدان شهية', severity: 'high' }
+    ],
+    treatments: [
+        { text: 'أدوية لتقليل الأعراض', type: 'pharmaceutical' },
+        { text: 'زراعة الكبد في الحالات المتقدمة', type: 'surgical' }
+    ],
+    scientificInfo: {
+        name: 'Cirrhosis',
+        type: 'اضطرابات كبدية',
+        transmission: 'غير معدي، ناتج عن تلف الكبد المستمر'
+    },
+    emergency: true
+},
+'السل المقاوم للأدوية': {
+    symptoms: [
+        { text: 'سعال مستمر مع دم', severity: 'high' },
+        { text: 'حُمّى', severity: 'high' },
+        { text: 'ألم في الصدر', severity: 'medium' }
+    ],
+    treatments: [
+        { text: 'مضادات درن مقاومة للأدوية', type: 'antibiotic' }
+    ],
+    scientificInfo: {
+        name: 'Drug-resistant Tuberculosis',
+        type: 'بكتيريا',
+        transmission: 'معدي عبر الهواء'
+    },
+    emergency: true
+},
+'التهاب الأذن الوسطى': {
+    symptoms: [
+        { text: 'ألم في الأذن', severity: 'high' },
+        { text: 'صعوبة في السمع', severity: 'medium' },
+        { text: 'حُمّى خفيفة', severity: 'low' }
+    ],
+    treatments: [
+        { text: 'مضادات حيوية (في حالة العدوى البكتيرية)', type: 'antibiotic' },
+        { text: 'مسكنات للألم', type: 'pain reliever' }
+    ],
+    scientificInfo: {
+        name: 'Otitis Media',
+        type: 'التهاب الأذن',
+        transmission: 'معدي عبر العدوى البكتيرية أو الفيروسية'
+    },
+    emergency: false
+},
     'الداء الزلاقي (Celiac Disease)': {
         symptoms: [
             { text: 'الإسهال المزمن', severity: 'high' },
