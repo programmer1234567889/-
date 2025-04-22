@@ -414,6 +414,41 @@
         },
         emergency: true
     },
+            'مرض لايم': {
+        symptoms: [
+            { text: 'طفح جلدي دائري', severity: 'medium' },
+            { text: 'حمى وقشعريرة', severity: 'medium' },
+            { text: 'تعب عام', severity: 'low' },
+            { text: 'آلام المفاصل', severity: 'medium' }
+        ],
+        treatments: [
+            { text: 'مضادات حيوية مثل دوكسيسيكلين (Doxycycline)', type: 'antibiotic' }
+        ],
+        scientificInfo: {
+            name: 'Lyme Disease',
+            type: 'عدوى بكتيرية',
+            transmission: 'لدغة قراد مصاب'
+        },
+        emergency: false
+    },
+    'COVID-19': {
+        symptoms: [
+            { text: 'سعال جاف', severity: 'medium' },
+            { text: 'ضيق في التنفس', severity: 'high' },
+            { text: 'فقدان حاستي الشم والتذوق', severity: 'medium' },
+            { text: 'حمى', severity: 'high' }
+        ],
+        treatments: [
+            { text: 'الراحة والعزل المنزلي', type: 'supportive' },
+            { text: 'أدوية مضادة للفيروسات مثل ريمديسيفير (Remdesivir)', type: 'antiviral' }
+        ],
+        scientificInfo: {
+            name: 'Coronavirus Disease 2019',
+            type: 'عدوى فيروسية',
+            transmission: 'معدي عبر الرذاذ التنفسي والأسطح'
+        },
+        emergency: true
+    },
     'متلازمة الشريان التاجي الحادة (Acute Coronary Syndrome)': {
         symptoms: [
             { text: 'ألم حاد في الصدر', severity: 'high' },
