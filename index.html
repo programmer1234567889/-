@@ -182,7 +182,7 @@
                              0 0 40px rgba(255, 215, 0, 0.3);
             }
             to {
-                text-shadow: 0 0 40px rgba(255, 215, 0, 0.😎,
+                text-shadow: 0 0 40px rgba(255, 215, 0, 0.8),
                              0 0 80px rgba(255, 215, 0, 0.5);
             }
         }
@@ -4124,12 +4124,12 @@
                 const duration = Math.random() * 5 + 5;
                 
                 // تخصيص كل جسيم
-                particle.style.left = ${posX}%;
-                particle.style.bottom = -${size}px;
-                particle.style.width = ${size}px;
-                particle.style.height = ${size}px;
-                particle.style.animationDelay = ${delay}s;
-                particle.style.animationDuration = ${duration}s;
+                particle.style.left = `${posX}%`;
+                particle.style.bottom = `-${size}px`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
                 particle.style.setProperty('--random-x', Math.random() > 0.5 ? 1 : -1);
                 
                 // شفافية متدرجة
@@ -4222,7 +4222,7 @@
             symptomsContainer.innerHTML = '';
             disease.symptoms.forEach((symptom, index) => {
                 const div = document.createElement('div');
-                div.className = symptom-item severity-${symptom.severity};
+                div.className = `symptom-item severity-${symptom.severity}`;
                 div.innerHTML = `
                     <span>${symptom.severity === 'high' ? '⚠️' : '✔️'}</span>
                     <span>${symptom.text}</span>
@@ -4248,9 +4248,9 @@
             scientificContainer.innerHTML = `
                 <h3>الاسم العلمي: ${disease.scientificInfo.name}</h3>
                 <p>النوع: ${disease.scientificInfo.type}</p>
-                ${disease.scientificInfo.prevalence ? <p>الانتشار: ${disease.scientificInfo.prevalence}</p> : ''}
+                ${disease.scientificInfo.prevalence ? `<p>الانتشار: ${disease.scientificInfo.prevalence}</p>` : ''}
                 ${disease.scientificInfo.triggers ? 
-                    <p>المحفزات: ${disease.scientificInfo.triggers.join('، ')}</p> : ''}
+                    `<p>المحفزات: ${disease.scientificInfo.triggers.join('، ')}</p>` : ''}
             `;
 
             // التحذير الطارئ إذا لزم الأمر
